@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 
-// class Player {
-//   String? name;
-//   Player();
-// }
-
 void main() {
-  // var lee = Player();
-
   runApp(const App());
 }
 
@@ -16,17 +9,45 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            title: const Text(
-              'Hello Flutter',
-              style: TextStyle(color: Colors.white),
+          backgroundColor: Color(0xFF181818),
+          body: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 40,
             ),
-            backgroundColor: Colors.amber[600],
-          ),
-          body: const Center(child: Text('Hello world'))),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 80,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Hey, HwanSeop',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 28,
+                              fontWeight: FontWeight.w800),
+                        ),
+                        Text(
+                          'Welcome Back',
+                          style: TextStyle(
+                            color: Color.fromRGBO(255, 255, 255, 0.8),
+                            fontSize: 18,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ],
+            ),
+          )),
     );
   }
 }
