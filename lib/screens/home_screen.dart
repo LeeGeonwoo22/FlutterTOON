@@ -7,20 +7,21 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFF181818),
+    return const Scaffold(
+      backgroundColor: Color(0xFF181818),
       body: SingleChildScrollView(
           child: Padding(
-        padding: const EdgeInsets.symmetric(
+        padding: EdgeInsets.symmetric(
           horizontal: 20,
+          vertical: 20,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
+            SizedBox(
               height: 80,
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Column(
@@ -45,25 +46,25 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-            const SizedBox(
+            SizedBox(
               height: 70,
             ),
-            const Text(
+            Text(
               'Total Balance',
               style: TextStyle(
                   fontSize: 22, color: Color.fromRGBO(255, 255, 255, 0.8)),
             ),
-            const SizedBox(
+            SizedBox(
               height: 5,
             ),
-            const Text(
+            Text(
               '\$5 194 472',
               style: TextStyle(fontSize: 48, color: Colors.white),
             ),
-            const SizedBox(
+            SizedBox(
               height: 30,
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Button(
@@ -76,10 +77,10 @@ class HomeScreen extends StatelessWidget {
                     textColor: Colors.white),
               ],
             ),
-            const SizedBox(
+            SizedBox(
               height: 100,
             ),
-            const Row(
+            Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -98,36 +99,32 @@ class HomeScreen extends StatelessWidget {
                         color: Color.fromRGBO(255, 255, 255, 0.8)),
                   ),
                 ]),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
-            Transform.translate(
-              offset: const Offset(0, 0),
-              child: const CurrencyCard(
-                  name: 'Euro',
-                  code: 'EUR',
-                  amount: '6 428',
-                  icon: Icons.euro_rounded,
-                  isInverted: false),
+            CurrencyCard(
+                offset: Offset(0, 0),
+                name: 'Euro',
+                code: 'EUR',
+                amount: '6 428',
+                icon: Icons.euro_rounded,
+                isInverted: false),
+            CurrencyCard(
+              offset: Offset(0, -20),
+              name: 'Dollar',
+              code: 'USD',
+              amount: '428',
+              icon: Icons.attach_money_outlined,
+              isInverted: true,
             ),
-            Transform.translate(
-              offset: const Offset(0, -20),
-              child: const CurrencyCard(
-                  name: 'Dollar',
-                  code: 'USD',
-                  amount: '428',
-                  icon: Icons.attach_money_outlined,
-                  isInverted: true),
+            CurrencyCard(
+              offset: Offset(0, -40),
+              name: 'BitCoin',
+              code: 'BTC',
+              amount: '9 785',
+              icon: Icons.currency_bitcoin,
+              isInverted: false,
             ),
-            Transform.translate(
-              offset: const Offset(0, -40),
-              child: const CurrencyCard(
-                  name: 'BitCoin',
-                  code: 'BTC',
-                  amount: '9 785',
-                  icon: Icons.currency_bitcoin,
-                  isInverted: false),
-            )
           ],
         ),
       )),
