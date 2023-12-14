@@ -1,16 +1,19 @@
-# toonfix
+# Flutter Wallet
 
-A new Flutter project.
+![Wallet](https://github.com/LeeGeonwoo22/FlutterWallet/assets/71261997/602aa60f-1286-4bf7-a234-54ec06ad6f69)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+- lib 
+    -- screens 
+        // 홈 화면 
+        - home_screen.dart
+    
+    -- widgets
+        // 버튼 위젯과 카드 위젯
+        - button.dart
+        - currency_card.dart
+    
+    -- main.dart
+          
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+재사용을 위해 렌더되는 화면과 최상단 main을 따로 분리 하였습니다.

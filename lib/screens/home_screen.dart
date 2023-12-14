@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      'Hey, HwanSeop',
+                      'Hey, GeonWoo',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 28,
